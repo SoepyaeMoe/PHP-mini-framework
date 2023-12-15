@@ -16,6 +16,7 @@
         <input type="text" name="name">
         <input type="submit" value="submit">
     </form>
+    <a href="/about">about>></a>
 </body>
 
 </html>

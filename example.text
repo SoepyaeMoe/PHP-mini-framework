@@ -1,0 +1,7 @@
+__________select all___________
+$users = DB::table('table_name')->get();
+$users = DB::table('table_name')->all();
+
+__________where clause______
+$users = DB::table('table_name')->where('db_column', 'condition_sign','input')->get();
+$users = DB::table('table_name')->where('db_column', 'condition_sign','input')->first();  //for first one

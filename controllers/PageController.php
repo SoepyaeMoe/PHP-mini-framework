@@ -4,7 +4,7 @@ class PageController
 {
     public function index()
     {
-        $users = App::get('database')->selectAll('users');
+        $users = DB::table('users')->get();
         $data['users'] = $users;
         return view('index', $data);
     }
@@ -15,6 +15,9 @@ class PageController
         ], 'users');
 
         header('location:/');
-
+    }
+    public function about()
+    {
+        return view('about');
     }
 }
