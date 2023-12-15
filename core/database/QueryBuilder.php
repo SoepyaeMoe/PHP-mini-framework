@@ -11,10 +11,18 @@ class QueryBuilder
     public function selectAll($table)
     {
         $statement = $this->pdo->prepare("select * from  $table");
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_OBJ);
+        return $statement;
+        // $statement->execute();
+        // return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function selectWhere($table, $dbcolumn, $sign)
+    {
+        $statement = $this->pdo->prepare("select * from $table where $dbcolumn $sign ?");
+        return $statement;
+        // return $statement->execute([$input]);
+        // return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
     public function insert($dataArr, $table)
     {
         $col = implode(',', array_keys($dataArr));
