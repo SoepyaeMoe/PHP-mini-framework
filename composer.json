@@ -1,0 +1,14 @@
+{
+    "name": "framework/app",
+    "authors": [
+        {
+            "name": "Soe Pyae Moe"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
