@@ -1,4 +1,9 @@
 <?php
+namespace database;
+
+use PDO;
+use core\App;
+
 class DB
 {
     protected static $table;
