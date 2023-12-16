@@ -1,5 +1,7 @@
 <?php
 
-Route::get('', 'PageController@index');
-Route::post('name', 'PageController@name');
-Route::get('about', 'PageController@about');
+use controllers\PageController;
+
+Route::get('', [PageController::class, 'index']);
+Route::post('name', [PageController::class, 'name']);
+Route::get('about', [PageController::class, 'about']);

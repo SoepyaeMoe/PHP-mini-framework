@@ -5,3 +5,8 @@ $users = DB::table('table_name')->all();
 __________where clause______
 $users = DB::table('table_name')->where('db_column', 'condition_sign','input')->get();
 $users = DB::table('table_name')->where('db_column', 'condition_sign','input')->first();  //for first one
+
+
+define route in routes.php
+
+connect database in config.php

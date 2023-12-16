@@ -1,4 +1,8 @@
 <?php
+namespace controllers;
+
+use core\App;
+use database\DB;
 
 class PageController
 {
@@ -11,10 +15,10 @@ class PageController
     public function name()
     {
         App::get('database')->insert([
-            'name' => $_POST['name'],
+            'name' => request('name'),
         ], 'users');
 
-        header('location:/');
+        return redirect('/');
     }
     public function about()
     {

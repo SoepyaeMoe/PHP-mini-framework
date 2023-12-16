@@ -2,7 +2,9 @@
 class Route
 {
     private static $routes = [
-        'GET' => [],
+        'GET' => [
+            //""=> [controllers/Pagecontroller, index];
+        ],
         'POST' => [],
     ];
     public static function load($filename)
@@ -26,7 +28,8 @@ class Route
     public function direct($uri, $method)
     {
         if (array_key_exists($uri, static::$routes[$method])) {
-            $explosion = explode('@', static::$routes[$method][$uri]);
+            $explosion = static::$routes[$method][$uri];
+            // dd($explosion[0]);
             $this->callMethod($explosion[0], $explosion[1]);
         } else {
             die("<h1>404 Not Found!</h1>");

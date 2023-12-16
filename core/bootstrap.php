@@ -1,4 +1,6 @@
 <?php
+
+use core\App;
 require "vendor/autoload.php";
 require "core/Helper/functions.php";
 
